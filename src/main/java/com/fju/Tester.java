@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class Tester {
     public static void main(String[] args) {
+            int total=0;
             while (true){
                 System.out.println("Please choose your option");
                 Scanner scanner=new Scanner(System.in);
@@ -29,8 +30,15 @@ public class Tester {
                         System.out.println("Your package have not delivered or you enter wrong id");
                     }else{
                         System.out.println("ID:" + id + " , price :" + pack.price);
+                        total=total+pack.price;
                     }
-                    
+                }else if(enter.startsWith("f")){
+                    String [] menu={"Drink" , "Cookies" , "Sandwiches" , "Ice cream"};
+                    System.out.println("What do you want to buy , please enter the number?(1. Drink 2.Cookies 3.Sandwiches 4.Ice cream)");
+                    Scanner eat=new Scanner(System.in);
+                    int e=Integer.parseInt(scanner.next());
+
+
                 }
             }
     }
