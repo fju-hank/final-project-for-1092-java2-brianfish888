@@ -33,12 +33,18 @@ public class Tester {
                         total=total+pack.price;
                     }
                 }else if(enter.startsWith("f")){
-                    String [] menu={"Drink" , "Cookies" , "Sandwiches" , "Ice cream"};
-                    System.out.println("What do you want to buy , please enter the number?(1. Drink 2.Cookies 3.Sandwiches 4.Ice cream)");
-                    Scanner eat=new Scanner(System.in);
-                    int e=Integer.parseInt(scanner.next());
+                    while (true) {
+                        String[] menu = {"Drink", "Cookies", "Sandwiches", "Ice cream"};
+                        System.out.println("What do you want to buy , please enter the number?(1. Drink 2.Cookies 3.Sandwiches 4.Ice cream)");
+                        Scanner eat = new Scanner(System.in);
+                        int input = Integer.parseInt(scanner.next());
+                        Menu m = new Menu(input);
+                        m.print();
+                        break;
+                    }
 
-
+                }else if (enter.startsWith("t")){
+                    break;
                 }
             }
     }
