@@ -1,4 +1,6 @@
 com/fju/Package.java
  com.fju.Package
+com/fju/Menu.java
+ com.fju.Menu
 com/fju/Tester.java
  com.fju.Tester
