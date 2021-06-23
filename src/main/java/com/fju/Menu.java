@@ -6,8 +6,6 @@ public class Menu {
     String name;
 
 
-
-
     public void print(){
         System.out.println();
     }
