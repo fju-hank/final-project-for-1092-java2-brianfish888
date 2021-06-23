@@ -1,8 +1,6 @@
 package com.fju;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class Tester {
     public static void main(String[] args) {
@@ -33,17 +31,22 @@ public class Tester {
                         total=total+pack.price;
                     }
                 }else if(enter.startsWith("f")){
-                    System.out.println("What do you want to buy , please enter the number?(1. Drink 2.Cookies 3.Sandwiches 4.Ice cream)");
+                    List menu= new ArrayList();
+                    menu.add(new Drink());
+                    menu.add(new Cookies());
+                    menu.add(new Ice());
+                    menu.add(new Sandwich());
                     while (true) {
-                        String[] menu = {"Drink", "Cookies", "Sandwiches", "Ice cream"};
+                        System.out.println("What do you want to buy , please enter the number?(0. Drink 25$ 1.Cookies 30$ 2.Sandwiches 50$ 3.Ice cream 35$)");
+
                         Scanner eat = new Scanner(System.in);
                         String  input=scanner.next();
                         if(input.startsWith("e")) {
                             break;
-                        } else if() {
+                        } else {
                             int food = Integer.parseInt(input);
-                            Menu m = new Menu(food);
-                            m.print();
+                            Menu m=(Menu) menu.get(food);
+                            System.out.println(m.name);
                         }
 
                     }
