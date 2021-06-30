@@ -7,7 +7,10 @@ public class Tester {
         int total=0;
             while (true){
 
-                System.out.println("Please choose your option");
+                System.out.println("Please choose your option:");
+                System.out.println("enter p for package");
+                System.out.println("enter f for food");
+                System.out.println("enter t for total");
                 Scanner scanner=new Scanner(System.in);
                 String enter=scanner.next();
 
@@ -43,7 +46,7 @@ public class Tester {
                     menu.add(new Ice());
                     while (true) {
                         System.out.println("What do you want to buy , please enter the number?)");
-                        System.out.println("(1. Drink 25$ 2.Cookies 30$ 3.Sandwiches 50$ 4.Ice cream 35$)");
+                        System.out.println("(0. Drink 25$ 1.Cookies 30$ 2.Sandwiches 50$ 3.Ice cream 35$)");
                         Scanner eat = new Scanner(System.in);
                         String  input=scanner.next();
                         if(input.startsWith("e")) {
